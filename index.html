@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babatunde Umar Faruk — Web &amp; Mobile App Developer | Vantaa, Finland</title>
+    <meta name="description"
+        content="Babatunde Umar Faruk is a Web and Mobile App Developer based in Vantaa, Finland. Experienced in building responsive web interfaces, mobile applications, software testing, and clean architecture with internships at Vaisala, Eficode, and Holvi.">
+    <meta name="keywords" content="Babatunde Umar Faruk, Web developer, Mobile app developer, Frontend developer, Flutter, React, TypeScript, Vantaa, Helsinki, Finland, Computer Science, University of Helsinki">
+    <meta property="og:title" content="Babatunde Umar Faruk — Web &amp; Mobile App Developer">
+    <meta property="og:description" content="Building responsive web interfaces and modern mobile applications with clean architecture and structured engineering practices.">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23f97316'/><text x='50%' y='55%' font-size='50' font-weight='800' font-family='monospace,sans-serif' fill='white' text-anchor='middle' dominant-baseline='middle'>B</text></svg>">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="logo-bracket">[</span>Babs<span class="logo-accent">.dev</span><span
+                    class="logo-bracket">]</span>
+            </a>
+            <nav class="nav-center">
+                <a href="#home" class="nav-link" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#education" class="nav-link" data-section="education">Education</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#resume" class="nav-link" data-section="resume">Resume</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+            <a href="#contact" class="nav-cta" id="nav-cta">
+                <span>Hire Me</span>
+                <i class="ri-arrow-right-up-line"></i>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#home" class="mob-link">Home</a>
+            <a href="#about" class="mob-link">About</a>
+            <a href="#experience" class="mob-link">Experience</a>
+            <a href="#education" class="mob-link">Education</a>
+            <a href="#projects" class="mob-link">Projects</a>
+            <a href="#resume" class="mob-link">Resume</a>
+            <a href="#contact" class="mob-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-grid-lines"></div>
+
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-pill reveal-up" style="--d:0ms">
+                    <span class="pill-dot"></span>
+                    Available in Finland &amp; Remote Worldwide
+                </div>
+
+                <h1 class="hero-title reveal-up" style="--d:100ms">
+                    <span class="line-wrap"><span class="line">Crafting</span></span>
+                    <span class="line-wrap"><span class="line gradient-text">Web &amp; Mobile</span></span>
+                    <span class="line-wrap"><span class="line">Apps That <span
+                                id="typewriter-word">Scale.</span></span></span>
+                </h1>
+
+                <p class="hero-subtitle reveal-up" style="--d:200ms">
+                    Hi, I'm <strong>Babatunde Umar Faruk</strong> — a Web and Mobile App Developer based in
+                    <strong>Vantaa, Finland</strong>. Skilled in building responsive web interfaces, robust mobile
+                    applications, collaborating with engineering teams, and debugging complex software issues with structured development practices.
+                </p>
+
+                <div class="hero-actions reveal-up" style="--d:300ms">
+                    <a href="#projects" class="btn-primary-glow" id="hero-work-btn">
+                        <span>View Projects</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#resume" class="btn-outline-glow" id="hero-cv-btn">
+                        <i class="ri-file-download-line"></i>
+                        <span>Download CV</span>
+                    </a>
+                    <a href="#contact" class="btn-ghost-glow" id="hero-contact-btn">
+                        <span>Let's Talk</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats reveal-up" style="--d:400ms">
+                    <div class="hero-stat" id="hs1">
+                        <span class="stat-value" data-count="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-name">Tech Internships</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat" id="hs2">
+                        <span class="stat-value" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-name">Mobile Apps</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat" id="hs3">
+                        <span class="stat-value" data-count="100">0</span><span class="stat-plus">%</span>
+                        <span class="stat-name">Web &amp; Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right reveal-up" style="--d:150ms">
+                <div class="hero-visual" id="hero-visual">
+                    <!-- Floating Orbit Rings -->
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                    <div class="orbit orbit-3"></div>
+
+                    <!-- Center Phone Mockup -->
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-speaker"></div>
+                            <div class="phone-camera"></div>
+                            <div class="phone-screen-area">
+                                <div class="app-topbar">
+                                    <div class="app-avatar"></div>
+                                    <div class="app-title-lines">
+                                        <div class="tl tl-a"></div>
+                                        <div class="tl tl-b"></div>
+                                    </div>
+                                    <div class="app-bell"><i class="ri-notification-3-line"></i></div>
+                                </div>
+                                <div class="app-balance-card">
+                                    <div class="balance-label">Digital Dashboard</div>
+                                    <div class="balance-amount">&euro;48,250.00</div>
+                                    <div class="balance-row">
+                                        <div class="bal-item">
+                                            <i class="ri-arrow-down-circle-line" style="color:#34d399"></i>
+                                            <span>Revenue</span>
+                                        </div>
+                                        <div class="bal-item">
+                                            <i class="ri-arrow-up-circle-line" style="color:#f87171"></i>
+                                            <span>Analytics</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="app-chart-area">
+                                    <div class="chart-bar" style="--h:55%;--delay:0s"></div>
+                                    <div class="chart-bar" style="--h:80%;--delay:0.1s"></div>
+                                    <div class="chart-bar" style="--h:45%;--delay:0.2s"></div>
+                                    <div class="chart-bar" style="--h:90%;--delay:0.3s"></div>
+                                    <div class="chart-bar active" style="--h:70%;--delay:0.4s"></div>
+                                    <div class="chart-bar" style="--h:60%;--delay:0.5s"></div>
+                                </div>
+                                <div class="app-actions-row">
+                                    <div class="app-action-btn">
+                                        <i class="ri-global-line"></i>
+                                        <span>Web</span>
+                                    </div>
+                                    <div class="app-action-btn">
+                                        <i class="ri-smartphone-line"></i>
+                                        <span>Mobile</span>
+                                    </div>
+                                    <div class="app-action-btn">
+                                        <i class="ri-code-box-line"></i>
+                                        <span>API</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Tech Badges (Web & Mobile) -->
+                    <div class="tech-badge badge-flutter" id="badge-flutter">
+                        <i class="ri-javascript-line"></i>
+                        <span>Web Dev</span>
+                    </div>
+                    <div class="tech-badge badge-firebase" id="badge-firebase">
+                        <i class="ri-flutter-fill"></i>
+                        <span>Mobile App</span>
+                    </div>
+                    <div class="tech-badge badge-dart" id="badge-dart">
+                        <i class="ri-code-s-slash-line"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-badge badge-git" id="badge-git">
+                        <i class="ri-server-line"></i>
+                        <span>REST APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-hint">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+            <div class="marquee-inner">
+                <span><i class="ri-window-line"></i> Web Development</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-smartphone-line"></i> Mobile App Development</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-layout-masonry-line"></i> Responsive Interfaces</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-code-s-slash-line"></i> Frontend Development</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-server-line"></i> API Integration</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-bug-line"></i> Testing &amp; Debugging</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-git-branch-line"></i> Version Control</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-file-text-line"></i> Technical Documentation</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-flutter-fill"></i> Flutter &amp; Dart</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-reactjs-line"></i> Modern UI/UX</span>
+                <span class="marquee-dot">&middot;</span>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="marquee-inner" aria-hidden="true">
+                <span><i class="ri-window-line"></i> Web Development</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-smartphone-line"></i> Mobile App Development</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-layout-masonry-line"></i> Responsive Interfaces</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-code-s-slash-line"></i> Frontend Development</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-server-line"></i> API Integration</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-bug-line"></i> Testing &amp; Debugging</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-git-branch-line"></i> Version Control</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-file-text-line"></i> Technical Documentation</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-flutter-fill"></i> Flutter &amp; Dart</span>
+                <span class="marquee-dot">&middot;</span>
+                <span><i class="ri-reactjs-line"></i> Modern UI/UX</span>
+                <span class="marquee-dot">&middot;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <div class="about-layout">
+                <div class="about-left">
+                    <div class="section-eyebrow reveal-up">About Me</div>
+                    <h2 class="section-headline reveal-up" style="--d:80ms">
+                        Building digital experiences with <span class="gradient-text">quality &amp; precision</span>.
+                    </h2>
+                    <p class="about-body reveal-up" style="--d:160ms">
+                        I'm a Web and Mobile App Developer based in <span class="highlight">Vantaa, Finland</span>, with
+                        internship experience supporting the development, testing, and maintenance of modern digital applications.
+                    </p>
+                    <p class="about-body reveal-up" style="--d:200ms">
+                        Skilled in building responsive web interfaces and mobile app experiences, collaborating with development
+                        teams, debugging software issues, and following structured development practices. Known for attention to detail,
+                        problem-solving, adaptability, and clear technical communication.
+                    </p>
+
+                    <div class="about-tags reveal-up" style="--d:280ms">
+                        <div class="atag"><i class="ri-lightbulb-line"></i> Problem Solving</div>
+                        <div class="atag"><i class="ri-team-line"></i> Team Collaboration</div>
+                        <div class="atag"><i class="ri-focus-3-line"></i> Attention to Detail</div>
+                        <div class="atag"><i class="ri-swap-box-line"></i> Adaptability</div>
+                        <div class="atag"><i class="ri-chat-check-line"></i> Technical Communication</div>
+                        <div class="atag"><i class="ri-time-line"></i> Time Management</div>
+                        <div class="atag"><i class="ri-book-open-line"></i> Continuous Learning</div>
+                        <div class="atag"><i class="ri-organization-chart"></i> Organization</div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary-glow reveal-up"
+                        style="--d:360ms; display:inline-flex; margin-top:2rem" id="about-hire-btn">
+                        <span>Work With Me</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+
+                    <!-- Process Steps -->
+                    <div class="process-strip reveal-up" style="--d:440ms">
+                        <div class="proc-step">
+                            <div class="proc-num">01</div>
+                            <div class="proc-text">
+                                <strong>Understand</strong>
+                                <span>Analyze requirements &amp; user flows</span>
+                            </div>
+                        </div>
+                        <div class="proc-arrow"><i class="ri-arrow-right-line"></i></div>
+                        <div class="proc-step">
+                            <div class="proc-num">02</div>
+                            <div class="proc-text">
+                                <strong>Build &amp; Test</strong>
+                                <span>Implement clean code &amp; UI testing</span>
+                            </div>
+                        </div>
+                        <div class="proc-arrow"><i class="ri-arrow-right-line"></i></div>
+                        <div class="proc-step">
+                            <div class="proc-num">03</div>
+                            <div class="proc-text">
+                                <strong>Deliver</strong>
+                                <span>Deploy stable, responsive releases</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right reveal-up" style="--d:200ms">
+                    <div class="about-card-grid">
+                        <div class="about-kpi" id="ak1">
+                            <div class="kpi-icon"><i class="ri-briefcase-4-line"></i></div>
+                            <div class="kpi-num" data-count="3">0</div>
+                            <div class="kpi-label">Finnish Tech Roles</div>
+                        </div>
+                        <div class="about-kpi kpi-accent" id="ak2">
+                            <div class="kpi-icon"><i class="ri-graduation-cap-line"></i></div>
+                            <div class="kpi-num">2</div>
+                            <div class="kpi-label">CS Degrees (MSc &amp; BSc)</div>
+                        </div>
+                        <div class="about-kpi kpi-accent2" id="ak3">
+                            <div class="kpi-icon"><i class="ri-smartphone-line"></i></div>
+                            <div class="kpi-num" data-count="5">0</div>
+                            <div class="kpi-label">Mobile Apps Shipped</div>
+                        </div>
+                        <div class="about-kpi" id="ak4">
+                            <div class="kpi-icon"><i class="ri-checkbox-circle-line"></i></div>
+                            <div class="kpi-num">100%</div>
+                            <div class="kpi-label">Web &amp; Mobile Focus</div>
+                        </div>
+                    </div>
+
+                    <!-- Code snippet: Modern Web & Mobile Architecture -->
+                    <div class="code-snippet reveal-up" style="--d:300ms">
+                        <div class="code-bar">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="code-file">app-service.ts</span>
+                        </div>
+                        <pre class="code-body"><code><span class="c-keyword">interface</span> <span class="c-class">DeveloperProfile</span> {
+  name: <span class="c-keyword">string</span>;
+  location: <span class="c-keyword">string</span>;
+  skills: <span class="c-keyword">string</span>[];
+}
+
+<span class="c-keyword">export const</span> <span class="c-fn">babatunde</span>: <span class="c-class">DeveloperProfile</span> = {
+  name: <span class="c-fn">"Babatunde Umar Faruk"</span>,
+  location: <span class="c-fn">"Vantaa, Finland"</span>,
+  skills: [<span class="c-fn">"Web Dev"</span>, <span class="c-fn">"Mobile Apps"</span>, <span class="c-fn">"Testing"</span>]
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <div class="section-eyebrow">Work Experience</div>
+                <h2 class="section-headline">
+                    Experience at <span class="gradient-text">leading Finnish companies</span>
+                </h2>
+                <p class="section-subtext">Hands-on experience developing, testing, and maintaining production web and mobile software.</p>
+            </div>
+
+            <div class="experience-list">
+                <!-- Experience 1: Vaisala -->
+                <div class="exp-card reveal-up" id="exp-vaisala">
+                    <div class="exp-left">
+                        <div class="exp-brand-visual">
+                            <img src="images/vaisala.jpg" alt="Vaisala campus in Vantaa, Finland" class="exp-brand-img" loading="lazy">
+                            <div class="exp-brand-overlay"></div>
+                            <div class="exp-brand-content">
+                                <div class="exp-brand-title">
+                                    <i class="ri-radar-line"></i>
+                                    <span>Vaisala</span>
+                                </div>
+                                <div class="exp-brand-location">
+                                    <i class="ri-map-pin-line"></i> Vantaa, Finland
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-right">
+                        <div class="exp-header-row">
+                            <div>
+                                <div class="exp-role">Web Development Intern</div>
+                                <div class="exp-company-name">
+                                    <a href="https://www.vaisala.com/" target="_blank" rel="noopener noreferrer">
+                                        Vaisala
+                                        <i class="ri-external-link-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-badge">
+                                    <i class="ri-map-pin-line"></i> Vantaa, Finland
+                                </span>
+                                <span class="exp-badge exp-badge-purple">
+                                    <i class="ri-time-line"></i> Internship
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="exp-desc">
+                            Supported the development and maintenance of responsive web interfaces for global industrial and environmental measurement solutions headquartered in Vantaa.
+                        </p>
+
+                        <ul class="exp-highlights">
+                            <li><i class="ri-checkbox-circle-fill"></i> Supported the development and maintenance of responsive web interfaces</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Assisted with implementing frontend features, testing interface behaviour, and resolving UI issues</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Worked with team members to improve usability, consistency, and code quality</li>
+                        </ul>
+
+                        <div class="exp-stack">
+                            <span class="ptag">Web Development</span>
+                            <span class="ptag">Responsive UI</span>
+                            <span class="ptag">Frontend Features</span>
+                            <span class="ptag">UI Testing</span>
+                            <span class="ptag">Code Quality</span>
+                        </div>
+
+                        <a href="https://www.vaisala.com/" target="_blank" rel="noopener noreferrer" class="exp-link">
+                            <i class="ri-global-line"></i>
+                            <span>About Vaisala</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Eficode -->
+                <div class="exp-card reveal-up" id="exp-eficode">
+                    <div class="exp-left">
+                        <div class="exp-brand-visual">
+                            <img src="images/eficode.jpg" alt="Eficode headquarters in Helsinki, Finland" class="exp-brand-img" loading="lazy">
+                            <div class="exp-brand-overlay"></div>
+                            <div class="exp-brand-content">
+                                <div class="exp-brand-title">
+                                    <i class="ri-terminal-box-line"></i>
+                                    <span>Eficode</span>
+                                </div>
+                                <div class="exp-brand-location">
+                                    <i class="ri-map-pin-line"></i> Helsinki, Finland
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-right">
+                        <div class="exp-header-row">
+                            <div>
+                                <div class="exp-role">Web Developer Intern</div>
+                                <div class="exp-company-name">
+                                    <a href="https://www.eficode.com/" target="_blank" rel="noopener noreferrer">
+                                        Eficode
+                                        <i class="ri-external-link-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-badge">
+                                    <i class="ri-map-pin-line"></i> Helsinki, Finland
+                                </span>
+                                <span class="exp-badge exp-badge-purple">
+                                    <i class="ri-time-line"></i> Internship
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="exp-desc">
+                            Contributed to web development tasks across interface implementation and digital application updates at leading European DevOps and software consultancy Eficode.
+                        </p>
+
+                        <ul class="exp-highlights">
+                            <li><i class="ri-checkbox-circle-fill"></i> Contributed to web development tasks across interface implementation and application updates</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Assisted with testing, debugging, and refining web features based on project requirements</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Participated in collaborative development workflows and technical documentation</li>
+                        </ul>
+
+                        <div class="exp-stack">
+                            <span class="ptag">Web Development</span>
+                            <span class="ptag">Interface Implementation</span>
+                            <span class="ptag">Testing &amp; Debugging</span>
+                            <span class="ptag">Collaborative Git</span>
+                            <span class="ptag">Documentation</span>
+                        </div>
+
+                        <a href="https://www.eficode.com/" target="_blank" rel="noopener noreferrer" class="exp-link">
+                            <i class="ri-global-line"></i>
+                            <span>About Eficode</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Holvi -->
+                <div class="exp-card reveal-up" id="exp-holvi">
+                    <div class="exp-left">
+                        <div class="exp-brand-visual">
+                            <img src="images/holvi.jpg" alt="Holvi headquarters in Helsinki, Finland" class="exp-brand-img" loading="lazy">
+                            <div class="exp-brand-overlay"></div>
+                            <div class="exp-brand-content">
+                                <div class="exp-brand-title">
+                                    <i class="ri-wallet-3-line"></i>
+                                    <span>Holvi</span>
+                                </div>
+                                <div class="exp-brand-location">
+                                    <i class="ri-map-pin-line"></i> Helsinki, Finland
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-right">
+                        <div class="exp-header-row">
+                            <div>
+                                <div class="exp-role">Mobile App Developer Intern</div>
+                                <div class="exp-company-name">
+                                    <a href="https://www.holvi.com/" target="_blank" rel="noopener noreferrer">
+                                        Holvi
+                                        <i class="ri-external-link-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-badge">
+                                    <i class="ri-map-pin-line"></i> Helsinki, Finland
+                                </span>
+                                <span class="exp-badge exp-badge-purple">
+                                    <i class="ri-time-line"></i> Internship
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="exp-desc">
+                            Supported the development and refinement of mobile application features for Holvi's digital business banking and financial management platform for European entrepreneurs.
+                        </p>
+
+                        <ul class="exp-highlights">
+                            <li><i class="ri-checkbox-circle-fill"></i> Supported the development and refinement of mobile application features</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Assisted with implementing user interface components, testing app flows, and identifying issues</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Worked with the development team to improve application reliability and user experience</li>
+                        </ul>
+
+                        <div class="exp-stack">
+                            <span class="ptag">Mobile App Development</span>
+                            <span class="ptag">UI Components</span>
+                            <span class="ptag">App Flow Testing</span>
+                            <span class="ptag">Application Reliability</span>
+                            <span class="ptag">Fintech UX</span>
+                        </div>
+
+                        <a href="https://www.holvi.com/" target="_blank" rel="noopener noreferrer" class="exp-link">
+                            <i class="ri-global-line"></i>
+                            <span>About Holvi</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <div class="section-eyebrow">Academic Background</div>
+                <h2 class="section-headline">
+                    Formal education in <span class="gradient-text">Computer Science</span>
+                </h2>
+                <p class="section-subtext">Rigorous computer science foundation from Finland's premier research and technology institutions.</p>
+            </div>
+
+            <div class="edu-grid reveal-up">
+                <!-- Degree 1: University of Helsinki -->
+                <div class="edu-card">
+                    <div class="edu-card-top">
+                        <div class="edu-icon-wrap">
+                            <i class="ri-graduation-cap-line"></i>
+                        </div>
+                        <span class="edu-badge">Master of Science</span>
+                    </div>
+                    <div>
+                        <div class="edu-degree">Master of Science (Computer Science)</div>
+                        <div class="edu-institution">
+                            <i class="ri-building-line"></i>
+                            <span>University of Helsinki, Finland &#127467;&#127470;</span>
+                        </div>
+                    </div>
+                    <p class="edu-desc">
+                        Advanced coursework in modern software systems, algorithm design, data engineering, distributed architectures, and rigorous software development practices.
+                    </p>
+                    <div class="edu-tags">
+                        <span class="ptag">Computer Science</span>
+                        <span class="ptag">Advanced Systems</span>
+                        <span class="ptag">Algorithms</span>
+                        <span class="ptag">Software Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Degree 2: Tampere University -->
+                <div class="edu-card">
+                    <div class="edu-card-top">
+                        <div class="edu-icon-wrap">
+                            <i class="ri-book-read-line"></i>
+                        </div>
+                        <span class="edu-badge">Bachelor of Science</span>
+                    </div>
+                    <div>
+                        <div class="edu-degree">Bachelor of Science (Computer Science)</div>
+                        <div class="edu-institution">
+                            <i class="ri-building-line"></i>
+                            <span>Tampere University, Finland &#127467;&#127470;</span>
+                        </div>
+                    </div>
+                    <p class="edu-desc">
+                        Comprehensive foundation in core computer science, software engineering principles, data structures, object-oriented design, databases, and system analysis.
+                    </p>
+                    <div class="edu-tags">
+                        <span class="ptag">Computer Science</span>
+                        <span class="ptag">Data Structures</span>
+                        <span class="ptag">Database Systems</span>
+                        <span class="ptag">OOP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Applications Section -->
+    <section id="projects" class="section showcase-section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <div class="section-eyebrow">Portfolio Showcase</div>
+                <h2 class="section-headline">
+                    Featured <span class="gradient-text">Applications &amp; Work</span>
+                </h2>
+                <p class="section-subtext">Production cross-platform mobile applications shipped, with a dedicated showcase area ready for web projects.</p>
+            </div>
+
+            <!-- Project Category Filter Tabs -->
+            <div class="project-tabs-wrap reveal-up">
+                <div class="project-tabs">
+                    <button class="proj-tab-btn active" data-tab="all">
+                        <i class="ri-apps-line"></i>
+                        <span>All Projects</span>
+                    </button>
+                    <button class="proj-tab-btn" data-tab="mobile">
+                        <i class="ri-smartphone-line"></i>
+                        <span>Mobile Apps</span>
+                        <span class="proj-tab-badge">5</span>
+                    </button>
+                    <button class="proj-tab-btn" data-tab="web">
+                        <i class="ri-window-line"></i>
+                        <span>Web Apps</span>
+                        <span class="proj-tab-badge">2</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WEB APPS SHOWCASE CONTAINER (Live Web Applications) -->
+            <div id="web-apps-container" class="web-showcase-container reveal-up">
+                <div class="web-cards-grid">
+                    <!-- Web App 1: Noir Fashion Store -->
+                    <div class="web-card">
+                        <div class="web-card-preview">
+                            <img src="images/noir.jpg" alt="Noir Fashion Store preview screenshot" loading="lazy">
+                            <div class="web-card-badge">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                <span>Live Web App</span>
+                            </div>
+                        </div>
+                        <div class="web-card-body">
+                            <span class="showcase-category">E-Commerce &bull; Fashion Platform</span>
+                            <div class="web-card-title">Noir Fashion Store</div>
+                            <div class="web-card-desc">
+                                A contemporary, high-conversion e-commerce fashion web platform. Engineered with dynamic product catalogs, seamless cart management, collection filtering, editorial lookbooks, and a responsive mobile-first shopping experience.
+                            </div>
+                            <div class="exp-stack">
+                                <span class="ptag">React</span>
+                                <span class="ptag">TypeScript</span>
+                                <span class="ptag">Responsive UI</span>
+                                <span class="ptag">E-Commerce</span>
+                                <span class="ptag">Vercel</span>
+                            </div>
+                            <div class="web-card-actions">
+                                <a href="https://noir-fashion-store.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary-glow">
+                                    <i class="ri-external-link-line"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="https://github.com/bolajidavid25" target="_blank" rel="noopener noreferrer" class="btn-outline-glow">
+                                    <i class="ri-github-fill"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web App 2: Await Apartment -->
+                    <div class="web-card">
+                        <div class="web-card-preview">
+                            <img src="images/await.jpg" alt="Await Apartment preview screenshot" loading="lazy">
+                            <div class="web-card-badge">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                <span>Live Web App</span>
+                            </div>
+                        </div>
+                        <div class="web-card-body">
+                            <span class="showcase-category">Real Estate &bull; Apartment Booking</span>
+                            <div class="web-card-title">Await Apartment</div>
+                            <div class="web-card-desc">
+                                A modern luxury residential and short-let apartment booking platform. Built with interactive property showcases, location discovery, room amenities exploration, dynamic inquiry workflows, and polished responsive layouts.
+                            </div>
+                            <div class="exp-stack">
+                                <span class="ptag">React</span>
+                                <span class="ptag">Frontend Architecture</span>
+                                <span class="ptag">Booking Flow</span>
+                                <span class="ptag">UI/UX</span>
+                                <span class="ptag">Vercel</span>
+                            </div>
+                            <div class="web-card-actions">
+                                <a href="https://awaitapartment.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary-glow">
+                                    <i class="ri-external-link-line"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="https://github.com/bolajidavid25" target="_blank" rel="noopener noreferrer" class="btn-outline-glow">
+                                    <i class="ri-github-fill"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE APPS SHOWCASE CONTAINER (Retained 5 production apps) -->
+            <div id="mobile-apps-container">
+                <!-- App 1: Valarpay -->
+                <div class="showcase-item reveal-up" id="showcase-1">
+                    <div class="showcase-image">
+                        <div class="showcase-img-wrap valarpay-slider" id="valarpay-slider">
+                            <img src="images/valarpay2.jpg" alt="Valarpay app screenshot 1" class="slider-img slider-img-active" id="valarpay-img-0">
+                            <img src="images/valarpay1.jpg" alt="Valarpay app screenshot 2" class="slider-img" id="valarpay-img-1">
+                            <div class="showcase-img-glow" style="--glow-color: rgba(249,115,22,0.4)"></div>
+                            <div class="slider-dots">
+                                <span class="slider-dot active" data-slide="0"></span>
+                                <span class="slider-dot" data-slide="1"></span>
+                            </div>
+                        </div>
+                        <div class="showcase-badge badge-purple">
+                            <i class="ri-google-play-fill"></i> Live on Play Store
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <div class="showcase-number">01</div>
+                        <span class="showcase-category">Fintech &bull; Payments</span>
+                        <h3 class="showcase-title">Valarpay</h3>
+                        <p class="showcase-desc">
+                            A secure peer-to-peer fintech mobile application.
+                            Users can send funds instantly, request payments, split bills, and manage
+                            wallets with bank-grade encryption, biometric authentication, and real-time transaction tracking.
+                        </p>
+                        <ul class="showcase-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> Instant P2P transfers with zero delays</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Multi-wallet support &amp; bill payments</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Biometric authentication &amp; 2FA security</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Real-time transaction notifications</li>
+                        </ul>
+                        <div class="showcase-stack">
+                            <span class="ptag">Flutter</span>
+                            <span class="ptag">Mobile Architecture</span>
+                            <span class="ptag">REST APIs</span>
+                            <span class="ptag">Firebase</span>
+                        </div>
+                        <div class="showcase-actions">
+                            <a href="https://play.google.com/store/apps/details?id=com.valarglobal.valarpay"
+                                class="btn-primary-glow" target="_blank" rel="noopener noreferrer" id="valarpay-play-btn">
+                                <i class="ri-google-play-fill"></i>
+                                <span>Play Store</span>
+                            </a>
+                            <a href="https://apps.apple.com/ng/app/valarpay-local-global-bank/id6755668965"
+                                class="btn-outline-glow" target="_blank" rel="noopener noreferrer" id="valarpay-appstore-btn">
+                                <i class="ri-apple-fill"></i>
+                                <span>App Store</span>
+                            </a>
+                            <a href="https://github.com/bolajidavid25" class="btn-outline-glow" id="valarpay-github-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-github-fill"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 2: Venterack (reversed) -->
+                <div class="showcase-item showcase-reverse reveal-up" id="showcase-2">
+                    <div class="showcase-image">
+                        <div class="showcase-img-wrap">
+                            <img src="images/venterack_web.jpg" alt="Venterack dashboard screenshot">
+                            <div class="showcase-img-glow" style="--glow-color: rgba(52,211,153,0.4)"></div>
+                        </div>
+                        <div class="showcase-badge badge-green">
+                            <i class="ri-store-2-line"></i> Business &amp; Retail Utility
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <div class="showcase-number">02</div>
+                        <span class="showcase-category">Commerce &bull; Multi-Branch Management</span>
+                        <h3 class="showcase-title">Venterack</h3>
+                        <p class="showcase-desc">
+                            An enterprise store management utility designed for retail businesses
+                            operating multiple branches. Owners manage cashier roles, monitor branch performance,
+                            track sales metrics, handle inventory, and generate comprehensive revenue reports.
+                        </p>
+                        <ul class="showcase-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> Multi-branch management &amp; analytics</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Cashier accounts with role-based access</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Offline-first with local storage</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Sales charts &amp; inventory tracking</li>
+                        </ul>
+                        <div class="showcase-stack">
+                            <span class="ptag">Mobile App</span>
+                            <span class="ptag">State Management</span>
+                            <span class="ptag">SQLite</span>
+                            <span class="ptag">REST APIs</span>
+                        </div>
+                        <div class="showcase-actions">
+                            <a href="https://drive.google.com/file/d/16_mIXw6pmlEL5V45J2rJm4ahP9D9g-DH/view?usp=sharing" class="btn-primary-glow" id="venterack-dl-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-download-cloud-2-line"></i>
+                                <span>Download APK</span>
+                            </a>
+                            <a href="https://www.ventetrack.com/" class="btn-outline-glow" id="venterack-web-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-global-line"></i>
+                                <span>Visit Website</span>
+                            </a>
+                            <a href="https://github.com/bolajidavid25" class="btn-outline-glow" id="venterack-github-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-github-fill"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 3: Brantro -->
+                <div class="showcase-item reveal-up" id="showcase-3">
+                    <div class="showcase-image">
+                        <div class="showcase-img-wrap valarpay-slider" id="brantro-slider">
+                            <img src="images/brantro1.jpg" alt="Brantro app screenshot 1" class="slider-img slider-img-active" id="brantro-img-0">
+                            <img src="images/brantro2.jpg" alt="Brantro app screenshot 2" class="slider-img" id="brantro-img-1">
+                            <div class="showcase-img-glow" style="--glow-color: rgba(245,158,11,0.4)"></div>
+                            <div class="slider-dots">
+                                <span class="slider-dot active" data-slide="0"></span>
+                                <span class="slider-dot" data-slide="1"></span>
+                            </div>
+                        </div>
+                        <div class="showcase-badge badge-amber">
+                            <i class="ri-advertisement-line"></i> AdTech Platform
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <div class="showcase-number">03</div>
+                        <span class="showcase-category">AdTech &bull; Marketplace</span>
+                        <h3 class="showcase-title">Brantro</h3>
+                        <p class="showcase-desc">
+                            An innovative advertising e-commerce marketplace connecting brands with targeted audiences —
+                            including vetted creators, muralists, billboard displays, and outdoor commercial spaces
+                            with live geographic matching and in-app communications.
+                        </p>
+                        <ul class="showcase-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> Interactive map of ad spaces &amp; creators</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Real-time messaging between brands &amp; creators</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Verified artist profiles &amp; ratings</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Campaign tracking &amp; booking system</li>
+                        </ul>
+                        <div class="showcase-stack">
+                            <span class="ptag">Mobile App</span>
+                            <span class="ptag">Maps Integration</span>
+                            <span class="ptag">Firebase</span>
+                            <span class="ptag">UI/UX</span>
+                        </div>
+                        <div class="showcase-actions">
+                            <a href="https://drive.google.com/file/d/1r3A0vQHUk5sJH_ZfWN6214-4hn4P0ljM/view?usp=sharing" class="btn-primary-glow" id="brantro-dl-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-download-cloud-2-line"></i>
+                                <span>Download APK</span>
+                            </a>
+                            <a href="https://brantro-frontend.vercel.app/" class="btn-outline-glow" id="brantro-web-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-global-line"></i>
+                                <span>Visit Web App</span>
+                            </a>
+                            <a href="https://github.com/bolajidavid25" class="btn-outline-glow" id="brantro-github-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-github-fill"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 4: UBI (reversed) -->
+                <div class="showcase-item showcase-reverse reveal-up" id="showcase-4">
+                    <div class="showcase-image">
+                        <div class="showcase-img-wrap valarpay-slider" id="ubi-slider">
+                            <img src="images/UBI2.jpg" alt="UBI app screenshot 1" class="slider-img slider-img-active" id="ubi-img-0">
+                            <img src="images/UBI1.jpg" alt="UBI app screenshot 2" class="slider-img" id="ubi-img-1">
+                            <div class="showcase-img-glow" style="--glow-color: rgba(16,185,129,0.4)"></div>
+                            <div class="slider-dots">
+                                <span class="slider-dot active" data-slide="0"></span>
+                                <span class="slider-dot" data-slide="1"></span>
+                            </div>
+                        </div>
+                        <div class="showcase-badge badge-green">
+                            <i class="ri-plant-line"></i> AgriFintech Platform
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <div class="showcase-number">04</div>
+                        <span class="showcase-category">Fintech &bull; Agriculture</span>
+                        <h3 class="showcase-title">UBI</h3>
+                        <p class="showcase-desc">
+                            An agricultural fintech application bridging the gap between smallholder farmers and financial services.
+                            Enables field agents to geo-verify farms, collect biometric KYC data, and process microloan applications
+                            through a trusted identity workflow.
+                        </p>
+                        <ul class="showcase-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> KYC verification with biometrics &amp; document scans</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> GPS farm boundary mapping &amp; geotagging</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Microloan application &amp; status tracking</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Agent &amp; farmer dual-role system</li>
+                        </ul>
+                        <div class="showcase-stack">
+                            <span class="ptag">Mobile App</span>
+                            <span class="ptag">KYC Integration</span>
+                            <span class="ptag">GeoLocation</span>
+                            <span class="ptag">REST APIs</span>
+                        </div>
+                        <div class="showcase-actions">
+                            <a href="https://drive.google.com/file/d/1sYETvwIn5ZBNQflWHFBu2Ll4YLhOrZHe/view?usp=sharing" class="btn-primary-glow" id="ubi-dl-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-download-cloud-2-line"></i>
+                                <span>Download APK</span>
+                            </a>
+                            <a href="https://github.com/bolajidavid25" class="btn-outline-glow" id="ubi-github-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-github-fill"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 5: Tripitify -->
+                <div class="showcase-item reveal-up" id="showcase-5">
+                    <div class="showcase-image">
+                        <div class="showcase-img-wrap">
+                            <img src="images/tripitify_mockup.jpg" alt="Tripitify app screenshot">
+                            <div class="showcase-img-glow" style="--glow-color: rgba(34,211,238,0.4)"></div>
+                        </div>
+                        <div class="showcase-badge badge-cyan">
+                            <i class="ri-flight-takeoff-line"></i> Travel &amp; Booking
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <div class="showcase-number">05</div>
+                        <span class="showcase-category">Travel &bull; Booking Platform</span>
+                        <h3 class="showcase-title">Tripitify</h3>
+                        <p class="showcase-desc">
+                            A comprehensive travel planning and itinerary management app. Users browse destinations,
+                            book accommodations and transport, customize day-by-day itineraries, and connect with
+                            experienced trip planners on a verified marketplace.
+                        </p>
+                        <ul class="showcase-features">
+                            <li><i class="ri-checkbox-circle-fill"></i> Destination discovery &amp; custom trip builder</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Verified travel planner marketplace</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Booking management &amp; flight integrations</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Real-time collaborative itineraries</li>
+                        </ul>
+                        <div class="showcase-stack">
+                            <span class="ptag">Mobile App</span>
+                            <span class="ptag">Third-party APIs</span>
+                            <span class="ptag">Firebase</span>
+                            <span class="ptag">UI Testing</span>
+                        </div>
+                        <div class="showcase-actions">
+                            <a href="https://github.com/bolajidavid25" class="btn-primary-glow" id="tripitify-dl-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-github-fill"></i>
+                                <span>View Repository</span>
+                            </a>
+                            <a href="#contact" class="btn-outline-glow" id="tripitify-inquire-btn">
+                                <i class="ri-chat-1-line"></i>
+                                <span>Inquire</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CV / Resume Download Section -->
+    <section id="resume" class="section cv-section">
+        <div class="section-container">
+            <div class="cv-card reveal-up">
+                <div class="cv-bg-glow"></div>
+
+                <div class="cv-left">
+                    <div class="cv-badge">
+                        <i class="ri-file-text-line"></i>
+                        <span>Curriculum Vitae</span>
+                    </div>
+                    <h2 class="cv-title">
+                        Looking for a dedicated <span class="gradient-text">Web &amp; Mobile Developer?</span>
+                    </h2>
+                    <p class="cv-desc">
+                        Download my full CV detailing my Computer Science degrees from University of Helsinki and Tampere University, industry internships at Vaisala, Eficode, and Holvi, technical proficiencies, and software portfolio.
+                    </p>
+
+                    <div class="cv-highlights">
+                        <div class="cv-hitem">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>Master's &amp; Bachelor's Degrees in Computer Science in Finland</span>
+                        </div>
+                        <div class="cv-hitem">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>Industry Internships at Vaisala, Eficode, and Holvi</span>
+                        </div>
+                        <div class="cv-hitem">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>Responsive Web Interfaces, Cross-Platform Mobile Apps &amp; Testing</span>
+                        </div>
+                        <div class="cv-hitem">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>Available for Roles in Finland (Vantaa / Helsinki / Espoo) &amp; Remote</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-right">
+                    <div class="cv-action-card">
+                        <div class="cv-icon-wrap">
+                            <i class="ri-file-pdf-2-fill"></i>
+                            <span class="cv-format-pill">PDF</span>
+                        </div>
+
+                        <div class="cv-file-details">
+                            <div class="cv-filename">Babatunde_Umar_Faruk_CV.pdf</div>
+                            <div class="cv-meta">Web &amp; Mobile App Developer &middot; Vantaa, Finland</div>
+                        </div>
+
+                        <div class="cv-btn-group">
+                            <a href="mailto:Babatundeumarfaruk4@gmail.com?subject=CV%20Request%20-%20Babatunde%20Umar%20Faruk" class="btn-primary-glow cv-download-btn">
+                                <i class="ri-download-cloud-2-line"></i>
+                                <span>Request Full CV</span>
+                                <i class="ri-arrow-right-up-line"></i>
+                            </a>
+                            <a href="#contact" class="cv-preview-btn">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Contact Directly</span>
+                            </a>
+                        </div>
+
+                        <div class="cv-verified">
+                            <i class="ri-shield-check-line"></i>
+                            <span>Verified Profile &amp; Credentials</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <div class="contact-layout">
+                <div class="contact-left reveal-up">
+                    <div class="section-eyebrow">Contact</div>
+                    <h2 class="section-headline">
+                        Let's build <span class="gradient-text">something great</span> together
+                    </h2>
+                    <p class="about-body">
+                        Interested in discussing web or mobile development opportunities, technical collaborations, or engineering roles in Finland or remotely? I'd love to connect.
+                    </p>
+
+                    <div class="contact-details">
+                        <a href="mailto:Babatundeumarfaruk4@gmail.com" class="contact-row" id="contact-email">
+                            <div class="contact-icon"><i class="ri-mail-send-line"></i></div>
+                            <div class="contact-text">
+                                <span class="ct-label">Email</span>
+                                <span class="ct-value">Babatundeumarfaruk4@gmail.com</span>
+                            </div>
+                            <i class="ri-external-link-line ct-arrow"></i>
+                        </a>
+                        <a href="tel:+358442468119" class="contact-row" id="contact-phone">
+                            <div class="contact-icon"><i class="ri-phone-line"></i></div>
+                            <div class="contact-text">
+                                <span class="ct-label">Phone</span>
+                                <span class="ct-value">0442468119 (+358 44 246 8119)</span>
+                            </div>
+                            <i class="ri-external-link-line ct-arrow"></i>
+                        </a>
+                        <div class="contact-row" id="contact-location">
+                            <div class="contact-icon"><i class="ri-map-pin-line"></i></div>
+                            <div class="contact-text">
+                                <span class="ct-label">Location</span>
+                                <span class="ct-value">Vantaa, Finland &middot; Remote Worldwide</span>
+                            </div>
+                        </div>
+                        <div class="contact-row" id="contact-avail">
+                            <div class="contact-icon avail-icon"><i class="ri-time-line"></i></div>
+                            <div class="contact-text">
+                                <span class="ct-label">Availability</span>
+                                <span class="ct-value">Mon &ndash; Fri, 9am &ndash; 5pm EET / EEST</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-row">
+                        <a href="https://github.com/bolajidavid25" class="soc-btn" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" id="soc-github">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                        <a href="mailto:Babatundeumarfaruk4@gmail.com" class="soc-btn"
+                            aria-label="Email" id="soc-email">
+                            <i class="ri-mail-line"></i>
+                        </a>
+                        <a href="tel:+358442468119" class="soc-btn"
+                            aria-label="Phone" id="soc-phone">
+                            <i class="ri-phone-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-right reveal-up" style="--d:120ms">
+                    <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/Babatundeumarfaruk4@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="form-name" class="form-label">Your Name</label>
+                            <input type="text" id="form-name" name="name" class="form-control" required
+                                placeholder="Jane Doe" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">Email Address</label>
+                            <input type="email" id="form-email" name="email" class="form-control" required
+                                placeholder="jane@example.com" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject" class="form-label">Subject</label>
+                            <input type="text" id="form-subject" name="subject" class="form-control"
+                                placeholder="Project inquiry, opportunity...">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message" class="form-label">Message</label>
+                            <textarea id="form-message" name="message" rows="5" class="form-control" required
+                                placeholder="Tell me about your project or role..."></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New portfolio inquiry for Babatunde Umar Faruk">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="btn-primary-glow submit-btn" id="form-submit-btn">
+                            <span id="btn-text">Send Message</span>
+                            <i class="ri-send-plane-fill" id="btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <a href="#home" class="logo">
+                    <span class="logo-bracket">[</span>Babs<span class="logo-accent">.dev</span><span
+                        class="logo-bracket">]</span>
+                </a>
+                <p class="footer-tagline">
+                    Web and mobile app developer based in Vantaa, Finland. Building responsive web interfaces and modern mobile applications with structured engineering practices.
+                </p>
+            </div>
+            <div class="footer-links-col">
+                <span class="footer-col-label">Navigation</span>
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#experience" class="footer-link">Experience</a>
+                <a href="#education" class="footer-link">Education</a>
+                <a href="#projects" class="footer-link">Projects</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-links-col">
+                <span class="footer-col-label">Contact</span>
+                <a href="mailto:Babatundeumarfaruk4@gmail.com" class="footer-link">Email</a>
+                <a href="tel:+358442468119" class="footer-link">+358 44 246 8119</a>
+                <a href="https://github.com/bolajidavid25" class="footer-link" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Babatunde Umar Faruk. All rights reserved.</p>
+            <p>Crafted with passion in Vantaa, Finland &#127467;&#127470;</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
